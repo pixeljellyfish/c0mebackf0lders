@@ -1,8 +1,8 @@
-ARCHS = arm64 arm64e
+THEOS_DEVICE_IP = localhost
+THEOS_DEVICE_PORT = 2222
 
 include /opt/theos//makefiles/common.mk
 
-include /opt/theos/makefiles/tweak.mk
 SUBPROJECTS += Tweak Prefs
 
 include /opt/theos/makefiles/aggregate.mk

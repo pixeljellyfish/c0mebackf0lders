@@ -1,5 +1,5 @@
-@interface SBHFolder
-@end
+#import <SBHFolder>
+#import <UIKit>
 
 %hook SBHFolder
 - (BOOL)shouldRemovedWhenEmpty {

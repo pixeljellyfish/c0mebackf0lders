@@ -11,7 +11,7 @@
 		<key>detail</key>
 		<string>c0mebackf0ldersPrefsRootListController</string>
 		<key>icon</key>
-		<string>icon.png</string>
+		<string>/Resources/icon.png</string>
 		<key>isController</key>
 		<true/>
 		<key>label</key>
