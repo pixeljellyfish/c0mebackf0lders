@@ -52,7 +52,7 @@ initial release.
 
 ## developer ##
 
-[pixeljellyfish](https://twitter.com/pixeljellyfish)-main developer/tester.
+[pixeljellyfish](https://twitter.com/pixeljellyfish)- main developer/tester.
 
 ## Icon Desinger/Tweak-Name ##
 
