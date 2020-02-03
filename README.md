@@ -52,7 +52,7 @@ initial release.
 
 ## developer ##
 
-@devpixel12 [pixeljellyfish](https://twitter.com/pixeljellyfish)
+[pixeljellyfish](https://twitter.com/pixeljellyfish)
 
 ## icon desinger/name ##
 
