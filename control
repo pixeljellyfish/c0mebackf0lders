@@ -1,0 +1,10 @@
+Package: xyz.pixeljellyfish.c0mebackf0lders
+Name: c0mebackf0lders
+Depends: mobilesubstrate
+Version: 1.1.3
+Architecture: iphoneos-arm
+Description: a tweak to make folder never remove
+Depiction: https://devpixel12.github.io/repo/depictions/?p=xyz.pixeljellyfish.c0mebackf0lders
+Maintainer: pixeljellyfish
+Author: pixeljellyfish
+Section: Tweaks
