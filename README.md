@@ -52,12 +52,14 @@ initial release.
 
 ## developer ##
 
+[pixeljellyfish](https://twitter.com/pixeljellyfish)-main developer/tester.
+
+## Icon Desinger/Tweak-Name ##
+
+massive thanks to [Dave van Wijk](https://twitter.com/DaveWijk) for helping me with errors and also with the tweak name.
+
+massive thanks to [Thenatis](https://twitter.com/thenatis1) for the icon design and the tweak name.
+
+## TESTERS ##
 [pixeljellyfish](https://twitter.com/pixeljellyfish)
-
-## icon desinger/name ##
-
-massive thanks to [Dave van Wijk](https://twitter.com/DaveWijk) for helping me with  errors and also with the tweak name 
-
-massive thanks [Thenatis](https://twitter.com/thenatis1) for the icon and the tweak name
-
 
