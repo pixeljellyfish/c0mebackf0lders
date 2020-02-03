@@ -51,13 +51,13 @@ initial release.
 ```
 
 ## developer ##
-```text
+
 @devpixel12 [pixeljellyfish](https://twitter.com/pixeljellyfish)
-```
+
 ## icon desinger/name ##
-```text
+
 massive thanks to [Dave van Wijk](https://twitter.com/DaveWijk) for helping me with  errors and also with the tweak name 
 
 massive thanks [Thenatis](https://twitter.com/thenatis1) for the icon and the tweak name
-```
+
 
