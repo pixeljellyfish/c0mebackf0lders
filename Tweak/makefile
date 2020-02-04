@@ -1,5 +1,5 @@
-ARCHS = armv6 armv7 arm64
-TARGET = iphone:clang:13.0:11.2
+export ARCHS = armv6 armv7 arm64
+export TARGET = iphone:clang:12.2:11.2
 
 INSTALL_TARGET_PROCESSES = SpringBoard
 GO_EASY_ON_ME=1
