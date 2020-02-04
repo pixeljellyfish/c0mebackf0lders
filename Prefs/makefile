@@ -7,7 +7,7 @@ include /opt/theos/makefiles/common.mk
 
 BUNDLE_NAME = c0mebackf0ldersPrefs
 
-c0mebackf0ldersPrefs_FILES = c0mebackf0ldersPrefsRootListController.m
+c0mebackf0ldersPrefs_FILES = c0mebackf0ldersPrefsRootListController.h
 c0mebackf0ldersPrefs_INSTALL_PATH = /Library/PreferenceBundles
 c0mebackf0lders_FRAMEWORKS = UIKit
 c0mebackf0ldersPrefs_PRIVATE_FRAMEWORKS = Preferences
