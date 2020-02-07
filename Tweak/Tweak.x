@@ -4,10 +4,6 @@
 
 return NO;
 
-else
-
-return YES;
-
 }
 
 %end
