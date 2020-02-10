@@ -1,6 +1,6 @@
 # c0mebackF0lders
 
-## 1.1.2-2020-01-05
+## 1.0.0-2020-02-09
 
 ### Fixed
 
@@ -8,6 +8,11 @@
 squshed even more of those pesky bugs and took out the trash.
 did more code housekeeping.
 ```
+
+## changed
+
+first public release now avaible on [Twickd](https://repo.twickd.com/package/com.twickd.pixeljellyfish.c0mebackf0lders)
+
 
 ## 0.0.3-2019-12-16
 
