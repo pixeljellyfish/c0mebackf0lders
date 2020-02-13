@@ -1,5 +1,3 @@
-ARCHS = armv6 armv7 armv7s arm64 arm64e
-
 DEBUG = 0
 FINALPACKAGE = 1
 

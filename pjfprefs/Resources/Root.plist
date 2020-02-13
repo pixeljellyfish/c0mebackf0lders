@@ -10,7 +10,7 @@
 			<key>default</key>
 			<true/>
 			<key>defaults</key>
-			<string></string>
+			<string>no</string>
 			<key>key</key>
 			<string>yes</string>
 			<key>label</key>
@@ -27,14 +27,20 @@
 			<string>developer</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>pixeljellyfish</string>
 			<key>big</key>
-			<true/>
+   			<true/>
 			<key>cellClass</key>
 			<string>HBTwitterCell</string>
 			<key>height</key>
 			<integer>56</integer>
 			<key>label</key>
 			<string>pixeljellyfish</string>
+			<key>subtitle</key>
+			<string>main developer</string>
 			<key>showAvatar</key>
 			<true/>
 			<key>user</key>
@@ -51,46 +57,90 @@
 			<string>speical thanks to</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>iCraze</string>
 			<key>big</key>
-			<true/>
+   			<true/>
 			<key>cellClass</key>
 			<string>HBTwitterCell</string>
 			<key>height</key>
 			<integer>56</integer>
 			<key>label</key>
 			<string>iCraze</string>
+			<key>subtitle</key>
+			<string>helped me with errors and helped with the tweak</string>
 			<key>showAvatar</key>
 			<true/>
 			<key>user</key>
 			<string>iCrazeiOS</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>Thenatis1</string>
 			<key>big</key>
-			<true/>
+   			<true/>
 			<key>cellClass</key>
 			<string>HBTwitterCell</string>
 			<key>height</key>
 			<integer>56</integer>
 			<key>label</key>
 			<string>Thenatis</string>
+			<key>subtitle</key>
+			<string>icon/banner desinger and helped with the tweak name</string>
 			<key>showAvatar</key>
 			<true/>
 			<key>user</key>
 			<string>Thenatis1</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>DaveWijk</string>
 			<key>big</key>
-			<true/>
+   			<true/>
 			<key>cellClass</key>
 			<string>HBTwitterCell</string>
 			<key>height</key>
 			<integer>56</integer>
 			<key>label</key>
 			<string>Dave van Wijk</string>
+			<key>subtitle</key>
+			<string>helped me with errors and helped with the tweak name</string>
 			<key>showAvatar</key>
 			<true/>
 			<key>user</key>
 			<string>DaveWijk</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string></string>
+			<key>isStaticText</key>
+			<true/>
+			<key>label</key>
+			<string>other stuff</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>sourcecode</string>
+			<key>big</key>
+   			<true/>
+			<key>cellClass</key>
+			<string>HBLinkTableCell</string>
+			<key>label</key>
+			<string>GitHub</string>
+			<key>subtitle</key>
+			<string>source code</string>
+			<key>url</key>
+			<string>https://github.com/devpixel12/c0mebackF0lders</string>
 		</dict>
 	</array>
 	<key>title</key>
