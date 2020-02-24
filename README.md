@@ -16,7 +16,7 @@ first public release now avaible on [Twickd](https://repo.twickd.com/package/com
 
 ## 0.0.3-2019-12-16
 
-### Fixed
+### Fixed ##
 
 ```text
 squshed more of those pesky bugs and took out the trash.
@@ -24,7 +24,7 @@ did some code housekeeping.
 Fixed: tweak preferances to properly display correctly.
 ```
 
-### Changed
+### Changed ##
 
 ```text
 just some backend stuff.
@@ -34,13 +34,13 @@ added Tweak Preferances.
 
 ## 0.0.2 - 2019-11-14
 
-### Fixed
+### Fixed ##
 
 ```text
 squshed those pesky bugs and took out the trash.
 ```
 
-### Changed
+### Changed ##
 
 ```text
 just some backend stuff.
