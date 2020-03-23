@@ -17,6 +17,10 @@ BOOL tweakEnabled;
 	-(BOOL)isEmpty {
 		return NO;
 	}
+
+	-(BOOL)isCancelable {
+		return YES;
+	}
 	%end
 %end
 
