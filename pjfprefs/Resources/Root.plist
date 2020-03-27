@@ -4,26 +4,20 @@
 <dict>
 	<key>items</key>
 	<array>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<true/>
-			<key>defaults</key>
-			<string>com.yourcompany.pjfprefs</string>
-			<key>PostNotifcation</key>
-			<string>com.yourcompany.pjf-prefsreload</string>
+ 	   <dict>
+		 	<key>cell</key>
+		 	<string>PSSwitchCell</string>
+		 	<key>default</key>
+		 	<true/>
+		 	<key>defaults</key>
+		 	<string>com.yourcompany.pjfprefs</string>
+		 	<key>PostNotifcation</key>
+		 	<string>com.yourcompany.pjf-prefsreload</string>
 			<key>key</key>
-			<string>Tweak Enabled</string>
-			<key>label</key>
-			<string>Enabled</string>
-		</dict>
-		<dict>
-		<key>cell</key>
-		<string>PSGroupCell</string>
-		<key>label</key>
-		<string>Respring</string>
-		</dict>
+		 	<string>Enabled</string>
+		 	<key>label</key>
+		 	<string>Tweak Enabled</string>
+	    </dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -47,10 +41,6 @@
 			<integer>56</integer>
 			<key>label</key>
 			<string>pixeljellyfish</string>
-			<key>subtitle</key>
-			<string>main developer</string>
-			<key>showAvatar</key>
-			<true/>
 			<key>user</key>
 			<string>pixeljellyfish</string>
 		</dict>
@@ -77,10 +67,6 @@
 			<integer>56</integer>
 			<key>label</key>
 			<string>iCraze</string>
-			<key>subtitle</key>
-			<string>helped me with errors and helped with the tweak</string>
-			<key>showAvatar</key>
-			<true/>
 			<key>user</key>
 			<string>iCrazeiOS</string>
 		</dict>
@@ -97,10 +83,6 @@
 			<integer>56</integer>
 			<key>label</key>
 			<string>Thenatis</string>
-			<key>subtitle</key>
-			<string>icon/banner desinger and helped with the tweak name</string>
-			<key>showAvatar</key>
-			<true/>
 			<key>user</key>
 			<string>Thenatis1</string>
 		</dict>
@@ -117,10 +99,6 @@
 			<integer>56</integer>
 			<key>label</key>
 			<string>Dave van Wijk</string>
-			<key>subtitle</key>
-			<string>helped me with errors and helped with the tweak name</string>
-			<key>showAvatar</key>
-			<true/>
 			<key>user</key>
 			<string>DaveWijk</string>
 		</dict>
@@ -149,10 +127,6 @@
 			<string>source code</string>
 			<key>url</key>
 			<string>https://github.com/devpixel12/c0mebackF0lders</string>
-		</dict>
-		<dict>
-			<key>footerText</key>
-			<string>developed with </string>
 		</dict>
 	</array>
 	<key>title</key>

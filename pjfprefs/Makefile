@@ -1,4 +1,4 @@
-include /opt/theos/makefiles/common.mk
+include /home/pixeljellyfish/theos/makefiles/common.mk
 
 BUNDLE_NAME = pjfprefs
 
@@ -9,7 +9,7 @@ pjfprefs_PRIVATE_FRAMEWORKS = Preferences
 $(BUNDLE_NAME)_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
 pjfprefs_CFLAGS = -fobjc-arc
 
-include /opt/theos/makefiles/bundle.mk
+include /home/pixeljellyfish/theos/makefiles/bundle.mk
 
 internal-stage::
 	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences$(ECHO_END)

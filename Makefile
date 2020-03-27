@@ -1,11 +1,9 @@
-ARCHS = arm64 arm64e
-
-DEBUG = 0
-FINALPACKAGE = 1
-
 INSTALL_TARGET_PROCESSES = SpringBoard
+ARCHS = armv7s arm64 arm64e
+DEBUG=0
+GO_EASY_ON_ME = 1
 
-include /opt/theos/makefiles/common.mk
+include /home/pixeljellyfish/theos/makefiles/common.mk
 
 TWEAK_NAME = c0mebackf0lders
 
@@ -13,6 +11,7 @@ c0mebackf0lders_FILES = Tweak.xm
 c0mebackf0lders_EXTRA_FRAMEWORKS += Cephei
 c0mebackf0lders_CFLAGS = -fobjc-arc
 
-include /opt/theos/makefiles/tweak.mk
+include /home/pixeljellyfish/theos/makefiles/tweak.mk
 SUBPROJECTS += pjfprefs
-include /opt/theos/makefiles/aggregate.mk
+include /home/pixeljellyfish/theos/makefiles/aggregate.mk
+

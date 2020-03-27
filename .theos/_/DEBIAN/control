@@ -1,10 +1,10 @@
 Package: com.pixeljellyfish.c0mebackf0lders
 Name: c0mebackf0lders
-Depends: mobilesubstrate, ws.hbang.common
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
 Architecture: iphoneos-arm
 Description: folders never be removed
 Maintainer: pixeljellyfish
 Author: pixeljellyfish
 Section: Tweaks
-Version: 1.0
-Installed-Size: 460
+Version: 1.0.1-1
+Installed-Size: 300
