@@ -1,6 +1,6 @@
 INSTALL_TARGET_PROCESSES = SpringBoard
 ARCHS = armv7s arm64 arm64e
-DEBUG=0
+FINALPACKAGE = 1
 GO_EASY_ON_ME = 1
 
 include /home/pixeljellyfish/theos/makefiles/common.mk
