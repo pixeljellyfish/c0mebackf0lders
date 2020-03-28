@@ -1,5 +1,19 @@
 # c0mebackF0lders
 
+## 1.0.1-2020-03-28
+### Fixed 
+```text
+-cleaned up tweak code
+-fixed an issue where twitter/website links wasn't working in prefs
+-after installation if cydia or zebra etc tell you to return to the package manager it's okay the tweak still installs, just respring with dragspring or using another method to respring
+```
+
+## changed 
+```text
+-added support for ios 12-13.3.1 (13.4 (not tested yet)
+-added support for arm64e
+```
+
 ## 1.0.0-2020-02-09
 
 ### Fixed
