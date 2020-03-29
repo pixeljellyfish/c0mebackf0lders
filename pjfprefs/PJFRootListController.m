@@ -15,6 +15,9 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Respring" style:UIBarButtonItemStylePlain target:self action:@selector(respring:)];
 }
 
+@implementation PJFBannercell
+    -(id)initWithSpe
+
 - (void)pixeljellyfish {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/intent/follow?screen_name=pixeljellyfish"]];
 }

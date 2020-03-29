@@ -1,16 +1,36 @@
 #import <Cephei/HBPreferences.h>
-HBPreferences *preferences;
+HBPreferences *prefs;
 
-%hook SBFolder
-		-(BOOL)containsIcon:(id)arg1 {
-			return YES;
-		}
+BOOL Enabled;
 
-		-(BOOL)shouldRemoveWhenEmpty {
-			return NO;
-		}
+%group tweakEnabled
+    %hook SBFolder
 
-		-(BOOL)isEmpty {
-			return NO;
-		}
+        -(BOOL)containsIcon:(id)arg1 {
+            return YES;
+        }
+
+        -(BOOL)shouldRemoveWhenEmpty {
+            return NO;
+        }
+
+        -(BOOL)isEmpty {
+            return NO;
+        }
+
+    %end
 %end
+
+extern NSString *const HBPreferencesDidChangeNotification;
+
+%ctor {
+    prefs = [[HBPreferences alloc] initWithIdentifier:@"com.yourcompany.pjfprefs"];
+    [prefs registerBool:&Enabled default:NO forKey:@"Enabled"];
+
+    if(!Enabled) {
+        return;
+    } else {
+
+    %init(tweakEnabled);
+  }
+}

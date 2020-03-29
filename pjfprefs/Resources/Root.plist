@@ -4,20 +4,30 @@
 <dict>
 	<key>items</key>
 	<array>
- 	   <dict>
-		 	<key>cell</key>
-		 	<string>PSSwitchCell</string>
-		 	<key>default</key>
-		 	<true/>
-		 	<key>defaults</key>
-		 	<string>com.yourcompany.pjfprefs</string>
-		 	<key>PostNotifcation</key>
-		 	<string>com.yourcompany.pjf-prefsreload</string>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			</dict>
+			<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>headerCellClass</key>
+			<string>ICRBannerCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.yourcompany.pjfprefs</string>
+			<key>PostNotifcation</key>
+			<string>com.yourcompany.pjf-prefsreload</string>
 			<key>key</key>
-		 	<string>Enabled</string>
-		 	<key>label</key>
-		 	<string>Tweak Enabled</string>
-	    </dict>
+			<string>Enabled</string>
+			<key>label</key>
+			<string>Tweak Enabled</string>
+		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -54,6 +64,26 @@
 			<key>label</key>
 			<string>speical thanks to</string>
 		</dict>
+		<dict> 
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>action</key>
+            <string>c0dine</string>
+            <key>big</key>
+            <true/>
+            <key>cellClass</key>
+            <string>HBTwitterCell</string>
+            <key>height</key>
+            <integer>56</integer>
+            <key>label</key>
+            <string>c0dine</string>
+            <key>subtitle</key>
+            <string>Added lower ios versions to support (Even IOS 7!) and helped with tweak Enabled</string>
+            <key>showAvatar</key>
+            <true/>
+            <key>user</user>
+            <string>c0dine<string>
+        </dict>
 		<dict>
 			<key>cell</key>
 			<string>PSButtonCell</string>
