@@ -3,23 +3,17 @@ HBPreferences *prefs;
 
 BOOL Enabled;
 
-// main tweak toggle
-
-%group c0mebackf0lders
+%group maintweak
 	%hook SBFolder
-
-		-(BOOL)containsIcon:(id)arg1
-		{
+		-(BOOL)containsIcon:(id)arg1 {
 			return YES;
 		}
 
-		-(BOOL)shouldRemoveWhenEmpty
-		{
+		-(BOOL)shouldRemoveWhenEmpty {
 			return NO;
 		}
 
-		-(BOOL)isEmpty
-		{
+		-(BOOL)isEmpty {
 			return NO;
 		}
 	%end
@@ -37,7 +31,7 @@ extern NSString *const HBPreferencesDidChangeNotification;
         return;
     } else {
 
-    %init(c0mebackf0lders);
+    %init(maintweak);
 	}
 
 
