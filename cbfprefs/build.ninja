@@ -1,0 +1,171 @@
+name = cbfprefs
+lowername = cbfprefs
+
+# Build file for cbfprefs
+# Generated at 07/06/20 23:42:59
+
+stagedir = _
+location = /Library/PreferenceBundles/$name.bundle
+dragondir = $$DRAGONBUILD
+sysroot = $dragondir/sdks/iPhoneOS.sdk
+proj_build_dir = .dragon
+objdir = $proj_build_dir/obj
+signdir = $proj_build_dir/sign
+builddir = $proj_build_dir/build
+build_target_file = $proj_build_dir/$stagedir$location/$name
+pwd = .
+resource_dir = Resources
+
+stage = true
+stage2 = mkdir -p .dragon/_/Library/PreferenceLoader/Preferences/; cp $
+    entry.plist .dragon/_/Library/PreferenceLoader/Preferences/$name.plist; $
+    cp -R Resources/ $proj_build_dir/$stagedir/$location
+
+
+internalsigntarget = $signdir/$build_target_file.unsigned
+internalsymtarget = $signdir/$build_target_file.unsym
+
+fwSearch = -F$sysroot/System/Library/Frameworks $
+    -F$sysroot/System/Library/PrivateFrameworks -F$dragondir/frameworks
+libSearch = -L$dragondir/lib -L.
+
+cc = clang
+codesign = ldid
+cxx = clang++
+dsym = dsymutil
+ld = clang++
+lipo = lipo
+logos = $dragondir/modules/logos/bin/logos.pl
+optool = $dragondir/bin/optool
+plutil = plutil
+swift = swift
+
+targetvers = 10.0
+
+frameworks = -framework Cephei -framework CepheiPrefs -framework $
+    Preferences -framework UIKit -framework Foundation
+libs = -lsubstrate
+
+arc = -fobjc-arc
+btarg = 
+debug = -fcolor-diagnostics
+entfile = 
+entflag = -S
+optim = 0
+warnings = -Wall
+
+cinclude = -I$dragondir/include -I$dragondir/vendor/include $
+    -I$dragondir/include/_fallback -I$DRAGONBUILD/headers/ -I$pwd
+header_includes = 
+public_headers = 
+
+usrCflags = 
+usrLDflags = 
+
+libflags = 
+lopt = -dynamiclib -ggdb -Xlinker -segalign -Xlinker 4000
+typeldflags = 
+
+cflags = -miphoneos-version-min=$targetvers -isysroot $sysroot
+ldflags = 
+lflags = 
+lfflags = 
+swiftflags = 
+
+theosshim = -include$$DRAGONBUILD/include/PrefixShim.h -w
+internalcflags = $cinclude -fmodules -fcxx-modules -fmodule-name=$name $arc $
+    -fbuild-session-file=$proj_build_dir/modules/ $debug $
+    -fmodules-prune-after=345600 $cflags $btarg -O$optim $
+    -fmodules-validate-once-per-build-session $fwSearch $
+    -miphoneos-version-min=$targetvers -isysroot $sysroot $header_includes  $
+    $triple $theosshim $warnings -fmodules-prune-interval=86400
+internalldflags = 
+internallflags = $internalcflags $typeldflags $frameworks $libs $libflags $
+    $lopt $libSearch $ldflags $libs
+internallfflags = 
+internalswiftflags = -color-diagnostics -enable-objc-interop $
+    -sdk/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk $
+    -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos $
+    -g -L/usr/lib/swift -swift-version 5 -module-name $name
+triple = 
+
+rule linkarmv7
+  command = $ld -arch armv7 $internallflags $internalldflags -o $out $in 
+  description = Linking $in with $ld [armv7]
+rule linkarm64
+  command = $ld -arch arm64 $internallflags $internalldflags -o $out $in 
+  description = Linking $in with $ld [arm64]
+rule linkarm64e
+  command = $ld -arch arm64e $internallflags $internalldflags -o $out $in 
+  description = Linking $in with $ld [arm64e]
+rule sign
+  command = $codesign $entflag$entfile $in && cp $in $out
+  description = Signing $name
+rule stage
+  command = $stage; $stage2
+  description = Running Stage for $name
+rule objcarm64
+  command = $cc -arch arm64 $internalcflags -c $in -o $out
+  description = Compiling $in with $cc [arm64]
+rule objcarm64e
+  command = $cc -arch arm64e $internalcflags -c $in -o $out
+  description = Compiling $in with $cc [arm64e]
+rule lipo
+  command = $lipo -create $in -output $out
+  description = Merging architechtures
+rule objcarmv7
+  command = $cc -arch armv7 $internalcflags -c $in -o $out
+  description = Compiling $in with $cc [armv7]
+rule debug
+  command = $dsym \"$in\" 2&> /dev/null; cp $in $out
+  description = Generating Debug Symbols for $name
+
+build $builddir/armv7/KRTableCell.m.o: objcarmv7 KRTableCell.m
+build $builddir/armv7/cbfRootListController.m.o: objcarmv7 $
+    cbfRootListController.m
+build $builddir/armv7/DuoTwitterCell.m.o: objcarmv7 DuoTwitterCell.m
+build $builddir/armv7/KRLinkCell.m.o: objcarmv7 KRLinkCell.m
+build $builddir/armv7/cbfSubPrefsListController.m.o: objcarmv7 $
+    cbfSubPrefsListController.m
+build $builddir/armv7/KRTwitterCell.m.o: objcarmv7 KRTwitterCell.m
+build $builddir/armv7/AppearanceSettings.m.o: objcarmv7 AppearanceSettings.m
+build $builddir/$name.armv7: linkarmv7 $builddir/armv7/KRTableCell.m.o $
+    $builddir/armv7/cbfRootListController.m.o $
+    $builddir/armv7/DuoTwitterCell.m.o $builddir/armv7/KRLinkCell.m.o $
+    $builddir/armv7/cbfSubPrefsListController.m.o $
+    $builddir/armv7/KRTwitterCell.m.o $builddir/armv7/AppearanceSettings.m.o
+build $builddir/arm64/KRTableCell.m.o: objcarm64 KRTableCell.m
+build $builddir/arm64/cbfRootListController.m.o: objcarm64 $
+    cbfRootListController.m
+build $builddir/arm64/DuoTwitterCell.m.o: objcarm64 DuoTwitterCell.m
+build $builddir/arm64/KRLinkCell.m.o: objcarm64 KRLinkCell.m
+build $builddir/arm64/cbfSubPrefsListController.m.o: objcarm64 $
+    cbfSubPrefsListController.m
+build $builddir/arm64/KRTwitterCell.m.o: objcarm64 KRTwitterCell.m
+build $builddir/arm64/AppearanceSettings.m.o: objcarm64 AppearanceSettings.m
+build $builddir/$name.arm64: linkarm64 $builddir/arm64/KRTableCell.m.o $
+    $builddir/arm64/cbfRootListController.m.o $
+    $builddir/arm64/DuoTwitterCell.m.o $builddir/arm64/KRLinkCell.m.o $
+    $builddir/arm64/cbfSubPrefsListController.m.o $
+    $builddir/arm64/KRTwitterCell.m.o $builddir/arm64/AppearanceSettings.m.o
+build $builddir/arm64e/KRTableCell.m.o: objcarm64e KRTableCell.m
+build $builddir/arm64e/cbfRootListController.m.o: objcarm64e $
+    cbfRootListController.m
+build $builddir/arm64e/DuoTwitterCell.m.o: objcarm64e DuoTwitterCell.m
+build $builddir/arm64e/KRLinkCell.m.o: objcarm64e KRLinkCell.m
+build $builddir/arm64e/cbfSubPrefsListController.m.o: objcarm64e $
+    cbfSubPrefsListController.m
+build $builddir/arm64e/KRTwitterCell.m.o: objcarm64e KRTwitterCell.m
+build $builddir/arm64e/AppearanceSettings.m.o: objcarm64e AppearanceSettings.m
+build $builddir/$name.arm64e: linkarm64e $builddir/arm64e/KRTableCell.m.o $
+    $builddir/arm64e/cbfRootListController.m.o $
+    $builddir/arm64e/DuoTwitterCell.m.o $builddir/arm64e/KRLinkCell.m.o $
+    $builddir/arm64e/cbfSubPrefsListController.m.o $
+    $builddir/arm64e/KRTwitterCell.m.o $builddir/arm64e/AppearanceSettings.m.o
+build $internalsymtarget: lipo $builddir/$name.armv7 $builddir/$name.arm64 $
+    $builddir/$name.arm64e
+build $internalsigntarget: debug $internalsymtarget
+build $build_target_file: sign $internalsigntarget
+build stage: stage build.ninja
+
+default $build_target_file

@@ -9,7 +9,6 @@
 //	Apache 2.0 License for cephei code used in KRPrefsLicense located in preference bundle
 //
 
-
 #import "DuoTwitterCell.h"
 #import <Preferences/PSSpecifier.h>
 #import <UIKit/UIImage+Private.h>

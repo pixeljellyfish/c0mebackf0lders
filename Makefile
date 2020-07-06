@@ -1,16 +1,16 @@
-ARCHS = arm64 arm64e 
+ARCHS = arm64 arm64e
+TARGET = iphone:clang::11.2
 
-PACKAGE_VERSION = 2.0
+PACKAGE_VERSION = 1.2-22
 
-FINALPACKAGE = 1
-DEBUG = 0
-
+DEBUG = 1
 include /home/pixeljellyfish/theos/makefiles/common.mk
 
 TWEAK_NAME = c0mebackf0lders
 
 c0mebackf0lders_FILES = Tweak.x
-c0mebackf0lders_FRAMEWORKS += UIKit
+c0mebackf0lders_FRAMEWORKS += UIKit Foundation
+$(TWEAK_NAME)_CFLAGS += -fobjc-arc
 c0mebackf0lders_EXTRA_FRAMEWORKS += Cephei
 
 include /home/pixeljellyfish/theos/makefiles/tweak.mk

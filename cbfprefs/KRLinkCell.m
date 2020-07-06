@@ -4,6 +4,7 @@
 //
 // Apache 2.0 License for code used in KRPrefsLicense located in preference bundle
 //
+int __isOSVersionAtLeast(int major, int minor, int patch) { NSOperatingSystemVersion version; version.majorVersion = major; version.minorVersion = minor; version.patchVersion = patch; return [[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:version]; }
 #import "KRLinkCell.h"
 #import <Preferences/PSSpecifier.h>
 #import <UIKit/UIColor+Private.h>

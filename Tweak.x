@@ -3,6 +3,8 @@ HBPreferences *prefs;
 
 BOOL Enabled;
 
+// main tweak code for ios 7.0 - 13.5
+
 %group maintweak
 	%hook SBFolder
 		-(BOOL)containsIcon:(id)arg1 {
@@ -36,4 +38,5 @@ extern NSString *const HBPreferencesDidChangeNotification;
 
 
 }
+
 // end of tweak developed by @pixeljellyfish with help from @c0dine

@@ -1,11 +1,12 @@
-EXPORT_TARGET = arm64 arm64e
+ARCHS = arm64 arm64e
+TARGET = iphone:clang::11.2
 
 include /home/pixeljellyfish/theos/makefiles/common.mk
 
 BUNDLE_NAME = cbfprefs
 $(BUNDLE_NAME)_FILES = $(wildcard *.m)
 $(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
-$(BUNDLE_NAME)_FRAMEWORKS = UIKit
+$(BUNDLE_NAME)_FRAMEWORKS = UIKit Foundation
 $(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences
 $(BUNDLE_NAME)_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
 
