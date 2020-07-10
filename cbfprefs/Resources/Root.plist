@@ -36,6 +36,26 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
+			<string>c0meabckf0lders settings</string>
+		</dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.pixeljellyfish.cbfprefs</string>
+            <key>key</key>
+            <string>DeleteFolder</string>
+            <key>label</key>
+            <string>Delete All Folders</string>
+            <key>PostNotification</key>
+            <string>com.pixeljellyfish.cbfprefs/ReloadPrefs</string>
+        </dict>
+        <dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
 			<string>My Other Tweaks</string>
 		</dict>
 		<dict>

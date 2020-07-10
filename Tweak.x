@@ -21,6 +21,16 @@ BOOL Enabled;
 	%end
 %end
 
+%group DeleteFolder
+	%hook SBFolder
+
+		-(void)didRemoveFolder:(id)arg1 {
+			return 1;
+		}
+
+	%end
+%end
+
 extern NSString *const HBPreferencesDidChangeNotification;
 
 // call the Preferences
@@ -29,14 +39,11 @@ extern NSString *const HBPreferencesDidChangeNotification;
 	prefs = [[HBPreferences alloc] initWithIdentifier:@"com.pixeljellyfish.cbfprefs"];
 	[prefs registerBool:&Enabled default:NO forKey:@"Enabled"];
 
-    if(!Enabled) {
+    if(!Enabled)
+			if (maintweak) %init(maintweak);
+			if (DeleteFolder) %init(DeleteFolder); {
         return;
-    } else {
-
-    %init(maintweak);
-	}
-
-
+    }
 }
 
 // end of tweak developed by @pixeljellyfish with help from @c0dine

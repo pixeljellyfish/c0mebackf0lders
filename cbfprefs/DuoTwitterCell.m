@@ -92,10 +92,10 @@ if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"aphelio
 		[cellOne addSubview:avatarViewOne];
 		[cellTwo addSubview:avatarViewTwo];
 		
-		UILabel *displayNameOne = [[UILabel alloc] initWithFrame:CGRectMake(68, 9, 80, 20.3333)];
+		UILabel *displayNameOne = [[UILabel alloc] initWithFrame:CGRectMake(68, 9, 80, 20)];
 		displayNameOne.text = [@"" stringByAppendingString:specifier.properties[@"firstLabel"]];
 		
-		UILabel *displayNameTwo = [[UILabel alloc] initWithFrame:CGRectMake(68, 9, 80, 20.3333)];
+		UILabel *displayNameTwo = [[UILabel alloc] initWithFrame:CGRectMake(68, 9, 80, 20)];
 		displayNameTwo.text = [@"" stringByAppendingString:specifier.properties[@"secondLabel"]];
 
 		UILabel *accountNameOne = [[UILabel alloc] initWithFrame:CGRectMake(68, 32.3333, 80, 15)];
