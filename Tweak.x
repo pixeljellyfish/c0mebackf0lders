@@ -39,9 +39,9 @@ extern NSString *const HBPreferencesDidChangeNotification;
 	prefs = [[HBPreferences alloc] initWithIdentifier:@"com.pixeljellyfish.cbfprefs"];
 	[prefs registerBool:&Enabled default:NO forKey:@"Enabled"];
 
-    if(!Enabled)
+    if(!Enabled) {
 			if (maintweak) %init(maintweak);
-			if (DeleteFolder) %init(DeleteFolder); {
+			if (DeleteFolder) %init(DeleteFolder); 
         return;
     }
 }
