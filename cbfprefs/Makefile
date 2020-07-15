@@ -1,16 +1,18 @@
 ARCHS = arm64 arm64e
-TARGET = iphone:clang::11.2
+SYSROOT = /Users/pixeljellyfish/theos/sdks/iPhoneOS13.4.sdk
 
-include /Users/pixeljellyfish/theos/makefiles/common.mk
+export THEOS=/Users/pixeljellyfish/theos/
+
+include /Users/pixeljellyfish/theos//makefiles/common.mk
 
 BUNDLE_NAME = cbfprefs
-$(BUNDLE_NAME)_FILES = $(wildcard *.m)
-$(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
-$(BUNDLE_NAME)_FRAMEWORKS = UIKit Foundation
-$(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences
-$(BUNDLE_NAME)_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
+cbfprefs_FILES = $(wildcard *.m)
+cbfprefs_INSTALL_PATH = /Library/PreferenceBundles
+cbfprefs_FRAMEWORKS = UIKit
+cbfprefs_PRIVATE_FRAMEWORKS = Preferences
+cbfprefs_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
 
-include /Users/pixeljellyfish/theos/makefiles/bundle.mk
+include /Users/pixeljellyfish/theos//makefiles/bundle.mk
 
 internal-stage::
 	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences$(ECHO_END)

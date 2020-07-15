@@ -11,7 +11,6 @@
 #import "KRTwitterCell.h"
 #import <Preferences/PSSpecifier.h>
 #import <UIKit/UIImage+Private.h>
-#import <Foundation/Foundation.h>
 #import <CepheiPrefs/HBAppearanceSettings.h>
 
 @interface KRLinkCell ()

@@ -12,7 +12,6 @@
 #import "DuoTwitterCell.h"
 #import <Preferences/PSSpecifier.h>
 #import <UIKit/UIImage+Private.h>
-#import <Foundation/Foundation.h>
 #import <UIKit/UIColor+Private.h>
 #import <version.h>
 

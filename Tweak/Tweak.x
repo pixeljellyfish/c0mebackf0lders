@@ -1,6 +1,5 @@
 #import <Cephei/HBPreferences.h>
-#import "c0mebackf0lders.h"
-HBPreferences *prefs;
+#import "./c0mebackf0lders.h"
 
 BOOL Enabled;
 
@@ -106,9 +105,6 @@ extern NSString *const HBPreferencesDidChangeNotification;
 
 	// Enabled Switch
     [prefs registerBool:&Enabled default:nil forKey:@"Enabled"];
-    
-	
-	
 
 
 	if (!dpkgInvalid && Enabled) {

@@ -1,7 +1,5 @@
 #import "cbfSubPrefsListController.h"
 
-#import "Foundation/Foundation.h"
-
 
 @implementation cbfSubPrefsListController
 
