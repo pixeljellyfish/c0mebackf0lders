@@ -23,8 +23,9 @@ BOOL Enabled;
 // delete folders function
 %group DeleteFolder
 	%hook SBFolder
+
 		-(void)didRemoveFolder:(id)arg1 {
-			%orig;
+            
 		}
 	%end
 %end

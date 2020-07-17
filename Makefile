@@ -1,5 +1,5 @@
-include /Users/pixeljellyfish/theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 SUBPROJECTS += Tweak cbfprefs
 
-include /Users/pixeljellyfish/theos/makefiles/aggregate.mk
+include $(THEOS_MAKE_PATH)/aggregate.mk

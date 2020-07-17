@@ -1,0 +1,13 @@
+Package: com.pixeljellyfish.c0mebackf0lders
+Name: c0mebackf0lders
+Depends: mobilesubstrate, preferenceloader, firmware (>= 7.0), ws.hbang.common (>= 1.14)
+Architecture: iphoneos-arm
+Description: prevents folders from being removed from the homescreen.
+Maintainer: pixeljellyfish <pixel.jellyfish@gmail.com>, c0dine
+Author: pixeljellyfish <pixel.jellyfish@gmail.com>
+Section: Tweaks
+Depiction: https://devpixel12.github.io/repo/assets/depictions/cbf/
+SileoDepiction: https://devpixel12.github.io/repo/assets/depictions/cbf/cbf.json
+Icon: https://devpixel12.github.io/repo/assets/depictions/cbf/assets/icon.png
+Version: 1.2-1+debug
+Installed-Size: 1100
