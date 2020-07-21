@@ -7,11 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>cbfprefs</string>
 	<key>CFBundleIdentifier</key>
-<<<<<<< HEAD
-	<string>com.pixeljellyfish.cbfpreferences</string>
-=======
 	<string>com.pixeljellyfish.cbfprefs</string>
->>>>>>> parent of 4f448f2... yeeeeet
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>

@@ -36,6 +36,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
+<<<<<<< HEAD
 			<string>c0meabckf0lders settings</string>
 		</dict>
         <dict>
@@ -56,6 +57,8 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
+=======
+>>>>>>> parent of 4f448f2... yeeeeet
 			<string>My Other Tweaks</string>
 		</dict>
 		<dict>
@@ -126,7 +129,11 @@
 			<key>cell</key>
 			<key>PSGroupCell</key>
 			<key>footerText</key>
+<<<<<<< HEAD
 			<string>version $("PACKAGE_VERSION")</string>
+=======
+			<string>version</string>
+>>>>>>> parent of 4f448f2... yeeeeet
 			<key>isStaticText</key>
 			<true/>
 			<key>footerAlignment</key>
