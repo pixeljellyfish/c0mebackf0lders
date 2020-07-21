@@ -1,12 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 include $(THEOS)/makefiles/common.mk
 =======
 ARCHS = arm64 arm64e
 TARGET = iphone:clang::11.2
 >>>>>>> parent of 4f448f2... yeeeeet
+=======
+include /Users/pixeljellyfish/theos/makefiles/common.mk
+>>>>>>> parent of 83c391a... yay it works
 
 PACKAGE_VERSION = 1.2-22
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 include $(THEOS_MAKE_PATH)/aggregate.mk
 =======
@@ -28,3 +33,6 @@ INSTALL_TARGET_PROCESSES = SpringBoard
 
 include /home/pixeljellyfish/theos/makefiles/aggregate.mk
 >>>>>>> parent of 4f448f2... yeeeeet
+=======
+include /Users/pixeljellyfish/theos/makefiles/aggregate.mk
+>>>>>>> parent of 83c391a... yay it works

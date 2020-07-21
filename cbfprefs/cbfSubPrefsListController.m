@@ -1,7 +1,6 @@
 #import "cbfSubPrefsListController.h"
 
 
-
 @implementation cbfSubPrefsListController
 
 - (instancetype)init {
@@ -26,7 +25,6 @@
 }
 
 - (void)loadFromSpecifier:(PSSpecifier *)specifier {
-    
     NSString *sub = [specifier propertyForKey:@"cbfSub"];
     NSString *title = [specifier name];
 
