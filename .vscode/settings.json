@@ -1,20 +1,28 @@
 {
     "cSpell.ignoreWords": [
-        "mebackf"
+        "cephei",
+        "kit",
+        "mebackf",
+        "ui",
+        "ui kit"
     ],
     "cSpell.words": [
         "c",
         "c mebackf lders",
+        "controller",
         "depiction",
         "hba",
         "hbang",
         "homescreen",
         "iphoneos",
         "lders",
+        "list",
         "mebackf",
         "mobilesubstrate",
         "pixeljellyfish",
         "preferenceloader",
+        "ps",
+        "ps list controller",
         "sileo",
         "sileo depiction"
     ]

@@ -2,7 +2,7 @@
 #import <Cephei/HBPreferences.h>
 
 // Utils
-HBPreferences *prefs;
+HBPreferences *preferences;
 
 // Thanks to Nepeta for the DRM
 BOOL dpkgInvalid;

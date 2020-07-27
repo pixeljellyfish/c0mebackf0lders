@@ -111,7 +111,7 @@ if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"aphelio
 			accountNameTwo.textColor = [UIColor whiteColor];
 		}
 
-		displayNameOne.font = [UIFont systemFontOfSize:14];
+		displayNameOne.font = [UIFont systemFontOfSize:13];
 		displayNameTwo.font = [UIFont systemFontOfSize:14];
 		accountNameOne.font = [UIFont systemFontOfSize:11];
 		accountNameTwo.font = [UIFont systemFontOfSize:11];
@@ -137,7 +137,7 @@ if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"aphelio
 		[duoCellView addSubview:cellOne];
 
 		UIView *separator = [[UIView alloc] initWithFrame:CGRectMake([[UIScreen mainScreen] bounds].size.width/2,0,0.333,57)];
-		separator.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5]; // TODO: get the actual one, programmatically
+		separator.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
 		[duoCellView addSubview:separator];
 
 		[duoCellView addSubview:cellTwo];

@@ -106,7 +106,7 @@
 			<key>cell</key>
 			<key>PSGroupCell</key>
 			<key>footerText</key>
-			<string>version</string>
+			<string>Version 2.0</string>
 			<key>isStaticText</key>
 			<true/>
 			<key>footerAlignment</key>

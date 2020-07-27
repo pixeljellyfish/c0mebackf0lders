@@ -1,7 +1,14 @@
 #import "cbfSubPrefsListController.h"
+#import <Preferences/PSSpecifier.h>
+#import <UIKit/UIImage+Private.h>
+#import <UIKit/UIColor+Private.h>
+#import <version.h>
 
+@interface KRLinkCell ()
 
-@implementation cbfSubPrefsListController
+- (BOOL)shouldShowAvatar;
+
+@end
 
 - (instancetype)init {
     self = [super init];
@@ -9,6 +16,7 @@
     if (self) {
         AppearanceSettings *appearanceSettings = [[AppearanceSettings alloc] init];
         self.hb_appearanceSettings = appearanceSettings;
+
     }
 
     return self;
