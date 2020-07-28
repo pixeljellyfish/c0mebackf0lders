@@ -1,7 +1,6 @@
 #import <Cephei/HBPreferences.h>
 #import "c0mebackf0lders.h"
 
-BOOL Enabled;
 
 // main tweak code for ios 7.0 - 13.5
 
@@ -21,6 +20,40 @@ BOOL Enabled;
 	%end
 %end
 
+%group DeleteFolder
+	%hook SBFolder
+-(void)viewDidAppear {
+    %orig;
+    if (isGestureSetup) {} 
+    else {
+        UIGestureRecognizer* gestureRecognizer;
+        gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(setupFolders)];
+        ((UILongPressGestureRecognizer*)gestureRecognizer).minimumPressDuration = 3.0;
+        [self addGestureRecognizer:gestureRecognizer];
+        isGestureSetup = TRUE;
+    }
+}
+
+%new
+-(void)setupFolders {
+    foldersShouldAppear = YES;
+}
+
+-(BOOL)shouldRemoveWhenEmpty {
+    if (foldersShouldAppear) {
+        return YES;
+    }
+}
+
+-(BOOL)isEmpty {
+    if (foldersShouldAppear) {
+        return YES;
+    }
+}
+
+	%end
+%end
+
 extern NSString *const HBPreferencesDidChangeNotification;
 
 %ctor {
@@ -30,6 +63,7 @@ extern NSString *const HBPreferencesDidChangeNotification;
     [preferences registerBool:&Enabled default:YES forKey:@"Enabled"];
 
 	%init(maintweak);
+	%init(DeleteFolder);
 
 }
 

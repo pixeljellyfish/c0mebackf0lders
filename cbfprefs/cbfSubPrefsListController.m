@@ -1,14 +1,6 @@
 #import "cbfSubPrefsListController.h"
-#import <Preferences/PSSpecifier.h>
-#import <UIKit/UIImage+Private.h>
-#import <UIKit/UIColor+Private.h>
-#import <version.h>
 
-@interface KRLinkCell ()
-
-- (BOOL)shouldShowAvatar;
-
-@end
+@implementation cbfSubPrefsListController
 
 - (instancetype)init {
     self = [super init];

@@ -1,12 +1,17 @@
-#import <UIKit/UIKit.h>
 #import <Cephei/HBPreferences.h>
+
+// Maintweak 
+BOOL Enabled;
+BOOL isGestureSetup = FALSE;
+BOOL foldersShouldAppear = FALSE;
+
 
 // Utils
 HBPreferences *preferences;
 
-// Thanks to Nepeta for the DRM
-BOOL dpkgInvalid;
+@interface UIKBTree : NSObject
+@end
 
 @interface SBIconController : UIViewController
 - (void)viewDidAppear:(BOOL)animated;
-@end
+@end    
