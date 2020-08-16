@@ -5,7 +5,7 @@
 
 ## ChangeLog ##
 
-> ChangeLog in now available on my repo website below: 👇 (no longer on GitHub)
+> ChangeLog in now available on my repo (no longer on GitHub)
 [View ChangeLog](https://repo.pixeljellyfish.codes/assets/depictions/cbf/cbfChangelog)
 
 ## developer ##
