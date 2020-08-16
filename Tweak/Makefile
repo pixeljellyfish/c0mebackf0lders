@@ -1,6 +1,17 @@
-ARCHS = arm64 arm64e
+# for window users comment out the # before the include
+ARCHS = arm64
 
-include /home/pixeljellyfish/theos/makefiles/common.mk
+# for mac and linux users comment out the # before the include
+#ARCHS = arm64 arm64e
+
+# for linux users comment out the # before the include
+#include $(THEOS_MAKE_PATH)/common.mk
+
+# for linux users comment out the # before the include
+#include /home/pixeljellyfish/theos/makefiles/common.mk
+
+# for linux users comment out the # before the include
+include /opt/theos/makefiles/common.mk
 
 TWEAK_NAME = c0mebackf0lders
 
@@ -11,4 +22,11 @@ c0mebackf0lders_EXTRA_FRAMEWORKS += Cephei
 after-install::
 	install.exec "sbreload"
 
-include /home/pixeljellyfish/theos/makefiles/tweak.mk
+# for mac users comment out the # before the include
+#include $(THEOS_MAKE_PATH)/tweak.mk
+
+# for linux users comment out the # before the include
+#include /home/pixeljellyfish/theos/makefiles/tweak.mk
+
+# for window users comment out the # before the include
+include /opt/theos/makefiles/tweak.mk

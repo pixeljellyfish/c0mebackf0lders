@@ -14,4 +14,4 @@ HBPreferences *preferences;
 
 @interface SBIconController : UIViewController
 - (void)viewDidAppear:(BOOL)animated;
-@end    
+@end
