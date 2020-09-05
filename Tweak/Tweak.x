@@ -22,7 +22,7 @@
 		}
 // and the last part of the main tweak is the isEmpty method this basically tells ios that a folder is not empty when it is
 		-(BOOL)isEmpty {
-            //so we return NO to fouce it to trick ios to think that the folder is not empty and has apps or icons
+            //so we return NO to force it to trick ios to think that the folder is not empty and has apps or icons
 			return NO;
 		}
 	%end
