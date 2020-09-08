@@ -1,4 +1,4 @@
-# c0mebackF0lders #
+# c0mebackf0lders #
 
 > Prevents Folders from being removed from the Homescreen.
 > Delete a folder just by long pressing the folder you want to delete and boom the folder is deleted
@@ -11,6 +11,7 @@
 ## Developer ##
 
 [pixeljellyfish](https://twitter.com/pixeljellyfish)- Main Developer
+
 [c0dine](https://twitter.com/c0dine)- Developer (Helping Fix Code Errors)
 
 ## Icon Designer/Tweak-Name ##
@@ -24,8 +25,11 @@ Massive Thanks to [Thenatis](https://twitter.com/thenatis1) for the icon design 
 > The Lovey people who tested my tweak ❤️
 
 [harryioss](https://twitter.com/harryioss)
-[cr4ptic](https://twitter.com/cr4ptic)
-[legendary](https://twitter.com/AwesomeCookieL)
+
+[Cryptic](https://twitter.com/cr4ptic)
+
+[Legendary](https://twitter.com/AwesomeCookieL)
+
 [MG32](https://twitter.com/THEREALMG32)
 
 ## License ##
