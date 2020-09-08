@@ -1,32 +1,32 @@
 # c0mebackF0lders #
 
-> prevent folders from being removed from the home screen.
-> delete a folder just by long pressing the folder you want to delete and boom the folder is deleted
+> Prevents Folders from being removed from the Homescreen.
+> Delete a folder just by long pressing the folder you want to delete and boom the folder is deleted
 
 ## ChangeLog ##
 
 > ChangeLog in now available on my repo (no longer on GitHub)
 [View ChangeLog](https://repo.pixeljellyfish.codes/assets/depictions/cbf/cbfChangelog)
 
-## developer ##
+## Developer ##
 
-[pixeljellyfish](https://twitter.com/pixeljellyfish)- main developer/tester.
+[pixeljellyfish](https://twitter.com/pixeljellyfish)- Main Developer
+[c0dine](https://twitter.com/c0dine)- Developer (Helping Fix Code Errors)
 
 ## Icon Designer/Tweak-Name ##
 
-massive thanks to [Dave van Wijk](https://twitter.com/DaveWijk) for helping me with errors and also with the tweak name.
+Massive Thanks to [Dave van Wijk](https://twitter.com/DaveWijk) for helping me with errors and also with the tweak name.
 
-massive thanks to [Thenatis](https://twitter.com/thenatis1) for the icon design and the tweak name.
+Massive Thanks to [Thenatis](https://twitter.com/thenatis1) for the icon design and the tweak name.
 
 ## TESTERS ##
 
 > The Lovey people who tested my tweak ❤️
 
-[pixeljellyfish](https://twitter.com/pixeljellyfish)
-[legendary](https://twitter.com/ayush24901444)
-[MG32](https://twitter.com/THEREALMG32)
 [harryioss](https://twitter.com/harryioss)
 [cr4ptic](https://twitter.com/cr4ptic)
+[legendary](https://twitter.com/AwesomeCookieL)
+[MG32](https://twitter.com/THEREALMG32)
 
 ## License ##
 
