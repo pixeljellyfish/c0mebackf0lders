@@ -27,7 +27,8 @@
 		}
 	%end
 %end
-// i commented this out until i found a fix for it
+
+// i commented this out until i find a fix for it
 
 // %group DeleteFolder
 // 	%hook SBFolder
