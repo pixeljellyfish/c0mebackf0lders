@@ -80,7 +80,7 @@
 			<key>subtitle</key>
 			<string>It's on my GitHub</string>
 			<key>url</key>
-			<string>https://github.com/devpixel12/c0mebackF0lders</string>
+			<string>https://github.com/pixeljellyfish/c0mebackF0lders</string>
 		</dict>
 		<dict>
 			<key>cellClass</key>
@@ -90,7 +90,7 @@
 			<key>subtitle</key>
 			<string>Leave a Bug Report Here</string>
 			<key>url</key>
-			<string>https://github.com/devpixel12/c0mebackF0lders/issues/new</string>
+			<string>https://github.com/pixeljellyfish/c0mebackF0lders/issues/new</string>
 		</dict>
         <dict>
 			<key>cell</key>
