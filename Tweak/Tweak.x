@@ -30,39 +30,39 @@
 
 // i commented this out until i find a fix for it
 
-// %group DeleteFolder
-// 	%hook SBFolder
-// -(void)viewDidAppear {
-//     %orig;
-//     if (isGestureSetup) {} 
-//     else {
-//         UIGestureRecognizer* gestureRecognizer;
-//         gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(setupFolders)];
-//         ((UILongPressGestureRecognizer*)gestureRecognizer).minimumPressDuration = 3.0;
-//         [self addGestureRecognizer:gestureRecognizer];
-//         isGestureSetup = TRUE;
-//     }
-// }
+/* %group DeleteFolder
+	%hook SBFolder
+-(void)viewDidAppear {
+    %orig;
+    if (isGestureSetup) {} 
+    else {
+        UIGestureRecognizer* gestureRecognizer;
+        gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(setupFolders)];
+        ((UILongPressGestureRecognizer*)gestureRecognizer).minimumPressDuration = 3.0;
+        [self addGestureRecognizer:gestureRecognizer];
+        isGestureSetup = TRUE;
+    }
+}
 
-// %new
-// -(void)setupFolders {
-//     foldersShouldAppear = YES;
-// }
+%new
+-(void)setupFolders {
+    foldersShouldAppear = YES;
+}
 
-// -(BOOL)shouldRemoveWhenEmpty {
-//     if (foldersShouldAppear) {
-//         return YES;
-//     }
-// }
+-(BOOL)shouldRemoveWhenEmpty {
+    if (foldersShouldAppear) {
+        return YES;
+    }
+}
 
-// -(BOOL)isEmpty {
-//     if (foldersShouldAppear) {
-//         return YES;
-//     }
-// }
+-(BOOL)isEmpty {
+    if (foldersShouldAppear) {
+        return YES;
+    }
+}
 
-// 	%end
-// %end
+	%end
+%end */
 
 // this is basically a Notification that is posted when a chage is made to the preferences Identifier
 extern NSString *const HBPreferencesDidChangeNotification;
@@ -74,7 +74,7 @@ extern NSString *const HBPreferencesDidChangeNotification;
     [preferences registerBool:&Enabled default:YES forKey:@"Enabled"];
 // then we init the main tweak if the enabled has been turned on
 	%init(maintweak);
-	// %init(DeleteFolder);
+	/*%init(DeleteFolder);*/
 
 }
 

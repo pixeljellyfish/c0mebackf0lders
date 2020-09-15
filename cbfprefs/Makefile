@@ -1,17 +1,17 @@
 # for Window users comment out the # before the include
-ARCHS = arm64
+#ARCHS = arm64
 
 # for Mac and Linux users comment out the # before the include
-#ARCHS = arm64 arm64e
+ARCHS = arm64 arm64e
 
 # for Mac users comment out the # before the include
 #include $(THEOS_MAKE_PATH)/common.mk
 
 # for Linux users comment out the # before the include
-#include /home/pixeljellyfish/theos/makefiles/common.mk
+include /home/pixeljellyfish/theos/makefiles/common.mk
 
 # for Windows users comment out the # before the include
-include /opt/theos/makefiles/common.mk
+#include /opt/theos/makefiles/common.mk
 
 BUNDLE_NAME = cbfprefs
 cbfprefs_FILES = $(wildcard *.m)
@@ -24,10 +24,10 @@ cbfprefs_EXTRA_FRAMEWORKS = CepheiPrefs
 #include $(THEOS_MAKE_PATH)/bundle.mk
 
 # for Linux users comment out the # before the include
-#include /home/pixeljellyfish/theos/makefiles/bundle.mk
+include /home/pixeljellyfish/theos/makefiles/bundle.mk
 
 # for Windows users comment out the # before the include
-include /opt/theos/makefiles/bundle.mk
+#include /opt/theos/makefiles/bundle.mk
 
 internal-stage::
 	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences$(ECHO_END)
@@ -37,7 +37,7 @@ internal-stage::
 #include $(THEOS_MAKE_PATH)/aggregate.mk
 
 # for Linux users comment out the # before the include
-#include /home/pixeljellyfish/theos/makefiles/aggregate.mk
+include /home/pixeljellyfish/theos/makefiles/aggregate.mk
 
 # for Windows users comment out the # before the include
-include /opt/theos/makefiles/aggregate.mk
+#include /opt/theos/makefiles/aggregate.mk

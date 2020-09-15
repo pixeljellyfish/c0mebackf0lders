@@ -1,5 +1,5 @@
-/home/pixeljellyfish/c0mebackF0lders/.theos/obj/debug/arm64/Tweak.x.026eca37.o: \
-  /home/pixeljellyfish/c0mebackF0lders/.theos/obj/debug/arm64/Tweak.x.m \
+/home/pixeljellyfish/c0mebackF0lders/.theos/obj/debug/arm64e/Tweak.x.0f7d8ec1.o: \
+  /home/pixeljellyfish/c0mebackF0lders/.theos/obj/debug/arm64e/Tweak.x.m \
   /home/pixeljellyfish/theos/Prefix.pch \
   /home/pixeljellyfish/theos/vendor/include/theos/BackwardsCompat.h \
   /home/pixeljellyfish/theos/vendor/include/theos/IOSMacros.h \
