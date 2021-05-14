@@ -30,51 +30,53 @@
 
 // i commented this out until i find a fix for it
 
-/* %group DeleteFolder
-	%hook SBFolder
--(void)viewDidAppear {
-    %orig;
-    if (isGestureSetup) {} 
-    else {
-        UIGestureRecognizer* gestureRecognizer;
-        gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(setupFolders)];
-        ((UILongPressGestureRecognizer*)gestureRecognizer).minimumPressDuration = 3.0;
-        [self addGestureRecognizer:gestureRecognizer];
-        isGestureSetup = TRUE;
-    }
-}
+ %group DeleteFolder
 
-%new
--(void)setupFolders {
-    foldersShouldAppear = YES;
+%hook SBIconView
+- (void)setApplicationShortcutItems:(NSArray *)arg1 {
+	NSMutableArray *newItems = [[NSMutableArray alloc] init];
+	for (SBSApplicationShortcutItem *item in arg1) {
+		[newItems addObject:item];
+	}
+	NSData *lightData = UIImagePNGRepresentation([[UIImage imageWithContentsOfFile:@"/Library/Application Support/Tweak.bundle/light.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]);
+	NSData *darkData = UIImagePNGRepresentation([[UIImage imageWithContentsOfFile:@"/Library/Application Support/Tweak.bundle/dark.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]);
+	
+	SBSApplicationShortcutItem *newItem = [%c(SBSApplicationShortcutItem) alloc];
+	newItem.localizedTitle = @"New Title";
+	newItem.localizedSubtitle = @"New Subtitle";
+	newItem.type = @"com.yout.tweak.itemIdentifier";
+	SBSApplicationShortcutCustomImageIcon *lightIcon = [[SBSApplicationShortcutCustomImageIcon alloc] initWithImagePNGData:lightData];
+	SBSApplicationShortcutCustomImageIcon *darkIcon = [[SBSApplicationShortcutCustomImageIcon alloc] initWithImagePNGData:darkData];
+	
+	if (/* Check for dark mode */ == YES) {
+		[newItem setIcon:darkIcon];
+	} else {
+		[newItem setIcon:lightIcon];
+	}
+	[newItems addObject:newItem];
+	%orig(newItems);
 }
-
--(BOOL)shouldRemoveWhenEmpty {
-    if (foldersShouldAppear) {
-        return YES;
-    }
++ (void)activateShortcut:(SBSApplicationShortcutItem *)item withBundleIdentifier:(NSString *)bundleID forIconView:(SBIconView *)iconView {
+	if ([[item type] isEqualToString:@"com.pixeljellyfish.c0mebackf0lders"]) {
+		// Do select action here
+	} else {
+		%orig;
+	}
 }
-
--(BOOL)isEmpty {
-    if (foldersShouldAppear) {
-        return YES;
-    }
-}
-
-	%end
-%end */
+%end
+%end
 
 // this is basically a Notification that is posted when a chage is made to the preferences Identifier
 extern NSString *const HBPreferencesDidChangeNotification;
 // now for the preferences
 %ctor {
     // this basically calls the preferences and inits the cbfprefs bundle id
-    preferences = [[HBPreferences alloc] initWithIdentifier:@"com.pixeljellyfish.cbfprefs"];
+    preferences = [[HBPreferences alloc] initWithIdentifier:@"com.pixeljellyfish.c0mebackf0lders"];
 // and then this resisters the bool Enabled with the Enabled in the Root.plist in the prefs folder
     [preferences registerBool:&Enabled default:YES forKey:@"Enabled"];
 // then we init the main tweak if the enabled has been turned on
 	%init(maintweak);
-	/*%init(DeleteFolder);*/
+	%init(DeleteFolder);
 
 }
 

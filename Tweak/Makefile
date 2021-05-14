@@ -4,11 +4,14 @@
 # for mac and linux users comment out the # before the include
 ARCHS = arm64 arm64e
 
+TARGET := iphone:clang:latest:13.0
+DEBUG = 1
+
 # for linux users comment out the # before the include
 #include $(THEOS_MAKE_PATH)/common.mk
 
 # for linux users comment out the # before the include
-include /home/pixeljellyfish/theos/makefiles/common.mk
+include /home/pixelfish04/theos/makefiles/common.mk
 
 # for windows users comment out the # before the include
 #include /opt/theos/makefiles/common.mk
@@ -18,6 +21,7 @@ TWEAK_NAME = c0mebackf0lders
 c0mebackf0lders_FILES = Tweak.x
 c0mebackf0lders_FRAMEWORKS += UIKit
 c0mebackf0lders_EXTRA_FRAMEWORKS += Cephei
+c0mebackf0lders_PRIVATE_FRAMEWORKS = SpringBoardServices
 
 after-install::
 	install.exec "sbreload"
@@ -26,7 +30,7 @@ after-install::
 #include $(THEOS_MAKE_PATH)/tweak.mk
 
 # for linux users comment out the # before the include
-include /home/pixeljellyfish/theos/makefiles/tweak.mk
+include /home/pixelfish04/theos/makefiles/tweak.mk
 
 # for window users comment out the # before the include
 #include /opt/theos/makefiles/tweak.mk

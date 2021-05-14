@@ -4,11 +4,13 @@
 # for Mac and Linux users comment out the # before the include
 ARCHS = arm64 arm64e
 
+TARGET := iphone:clang:latest:13.0
+
 # for Mac users comment out the # before the include
 #include $(THEOS_MAKE_PATH)/common.mk
 
 # for Linux users comment out the # before the include
-include /home/pixeljellyfish/theos/makefiles/common.mk
+include /home/pixelfish04/theos/makefiles/common.mk
 
 # for Windows users comment out the # before the include
 #include /opt/theos/makefiles/common.mk
@@ -24,7 +26,7 @@ cbfprefs_EXTRA_FRAMEWORKS = CepheiPrefs
 #include $(THEOS_MAKE_PATH)/bundle.mk
 
 # for Linux users comment out the # before the include
-include /home/pixeljellyfish/theos/makefiles/bundle.mk
+include /home/pixelfish04/theos/makefiles/bundle.mk
 
 # for Windows users comment out the # before the include
 #include /opt/theos/makefiles/bundle.mk
@@ -37,7 +39,7 @@ internal-stage::
 #include $(THEOS_MAKE_PATH)/aggregate.mk
 
 # for Linux users comment out the # before the include
-include /home/pixeljellyfish/theos/makefiles/aggregate.mk
+include /home/pixelfish04/theos/makefiles/aggregate.mk
 
 # for Windows users comment out the # before the include
 #include /opt/theos/makefiles/aggregate.mk
