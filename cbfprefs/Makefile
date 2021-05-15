@@ -7,6 +7,8 @@ TARGET := iphone:clang:11.2:10.3
 # for Mac and Linux users comment out the # before the include
 ARCHS = arm64
 
+TARGET := iphone:clang:latest:13.0
+
 # for Mac users comment out the # before the include
 include /Users/pixeljellyfish/theos/makefiles/common.mk
 

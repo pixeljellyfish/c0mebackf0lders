@@ -29,5 +29,4 @@ HBPreferences *prefs = nil;
 @end
 
 
-
 // and this is the end of the header file

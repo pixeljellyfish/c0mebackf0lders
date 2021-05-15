@@ -2,6 +2,8 @@ PREFIX=/Users/pixeljellyfish/theos/toolchain/Xcode.xctoolchain/usr/bin/
 # for mac users comment out the # before the include
 include /Users/pixeljellyfish/theos/makefiles/common.mk
 
+TARGET := iphone:clang:latest:13.0
+
 # for linux users comment out the # before the include
 #include /home/pixeljellyfish/theos/makefiles/common.mk
 
