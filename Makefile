@@ -1,21 +1,21 @@
+PREFIX=/Users/pixeljellyfish/theos/toolchain/Xcode.xctoolchain/usr/bin/
 # for mac users comment out the # before the include
-#include $(THEOS_MAKE_PATH)/common.mk
+include /Users/pixeljellyfish/theos/makefiles/common.mk
 
 # for linux users comment out the # before the include
-include /home/pixeljellyfish/theos/makefiles/common.mk
+#include /home/pixeljellyfish/theos/makefiles/common.mk
 
 # for windows users comment out the # before the include
 #include /opt/theos/makefiles/common.mk
 
 SUBPROJECTS += Tweak cbfprefs
+open_LDFLAGS += -F$(SYSROOT)/System/Library/PrivateFrameworks -framework SpringBoardServices
 
 # for mac users comment out the # before the include
-#include $(THEOS_MAKE_PATH)/aggregate.mk
+include /Users/pixeljellyfish/theos/makefiles/aggregate.mk
 
 # for linux users comment out the # before the include
-include /home/pixeljellyfish/theos/makefiles/aggregate.mk
+#include /home/pixeljellyfish/theos/makefiles/aggregate.mk
 
 # for windows users comment out the # before the include
 #include /opt/theos/makefiles/aggregate.mk
-
-
