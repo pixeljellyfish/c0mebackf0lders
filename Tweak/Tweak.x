@@ -4,6 +4,7 @@
 // next we imported my own header file which controls parts of my tweak without making a mess on the tweak.x file.
 #import "c0mebackf0lders.h"
 
+static FoldrEmpty* folderemptyClassInstance;
 
 // now time for the main tweak code that adds support for ios 7.0 thru to ios 14.x.x
 
@@ -38,9 +39,8 @@
  %hook SBFolder
 
 - (BOOL)isEmpty {
-        return YES;
+		return folderemptyClassInstance = YES && %orig;
 }
-
 	%end
 %end
 
@@ -63,9 +63,9 @@
 }
 + (void)activateShortcut:(SBSApplicationShortcutItem *)item withBundleIdentifier:(NSString *)bundleID forIconView:(SBIconView *)iconView {
 	if ([[item type] isEqualToString:@"com.pixeljellyfish.c0mebackf0lders"]) {
-		[%c(isEmpty) method:];
+		[[FoldrEmpty sharedInstance] isEmpty];
         return;
-	} else {
+	} else {	
 		%orig;
 	}
 }

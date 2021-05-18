@@ -1,4 +1,4 @@
-PREFIX=/Users/pixeljellyfish/theos/toolchain/Xcode.xctoolchain/usr/bin/
+#PREFIX=/Users/pixeljellyfish/theos/toolchain/Xcode.xctoolchain/usr/bin/
 TARGET := iphone:clang:11.2:10.3
 # for window users comment out the # before the include
 #ARCHS = arm64
@@ -7,10 +7,10 @@ TARGET := iphone:clang:11.2:10.3
 ARCHS = arm64
 
 # for mac users comment out the # before the include
-include /Users/pixeljellyfish/theos/makefiles/common.mk
+#include /Users/pixeljellyfish/theos/makefiles/common.mk
 
 # for linux users comment out the # before the include
-#include /home/pixeljellyfish/theos/makefiles/common.mk
+include /home/pixelfish04/theos/makefiles/common.mk
 
 # for windows users comment out the # before the include
 #include /opt/theos/makefiles/common.mk
@@ -27,10 +27,10 @@ after-install::
 	install.exec "sbreload"
 
 # for mac users comment out the # before the include
-include /Users/pixeljellyfish/theos/makefiles/tweak.mk
+#include /Users/pixeljellyfish/theos/makefiles/tweak.mk
 
 # for linux users comment out the # before the include
-#include /home/pixeljellyfish/theos/makefiles/tweak.mk
+include /home/pixelfish04/theos/makefiles/tweak.mk
 
 # for window users comment out the # before the include
 #include /opt/theos/makefiles/tweak.mk

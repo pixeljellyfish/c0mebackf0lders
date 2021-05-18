@@ -1,4 +1,4 @@
-PREFIX=/Users/pixeljellyfish/theos/toolchain/Xcode.xctoolchain/usr/bin/
+#PREFIX=/Users/pixeljellyfish/theos/toolchain/Xcode.xctoolchain/usr/bin/
 TARGET := iphone:clang:11.2:10.3
 
 # for Window users comment out the # before the include
@@ -10,10 +10,10 @@ ARCHS = arm64
 TARGET := iphone:clang:latest:13.0
 
 # for Mac users comment out the # before the include
-include /Users/pixeljellyfish/theos/makefiles/common.mk
+#include /Users/pixeljellyfish/theos/makefiles/common.mk
 
 # for Linux users comment out the # before the include
-#include /home/pixeljellyfish/theos/makefiles/common.mk
+include /home/pixelfish04/theos/makefiles/common.mk
 
 # for Windows users comment out the # before the include
 #include /opt/theos/makefiles/common.mk
@@ -26,10 +26,10 @@ cbfprefs_PRIVATE_FRAMEWORKS = Preferences
 cbfprefs_EXTRA_FRAMEWORKS = CepheiPrefs
 
 # for Mac users comment out the # before the include
-include /Users/pixeljellyfish/theos/makefiles/bundle.mk
+#include /Users/pixeljellyfish/theos/makefiles/bundle.mk
 
 # for Linux users comment out the # before the include
-#include /home/pixeljellyfish/theos/makefiles/bundle.mk
+include /home/pixelfish04/theos/makefiles/bundle.mk
 
 # for Windows users comment out the # before the include
 #include /opt/theos/makefiles/bundle.mk
@@ -39,10 +39,10 @@ internal-stage::
 	$(ECHO_NOTHING)cp entry.plist $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences/cbfprefs.plist$(ECHO_END)
 
 # for Mac users comment out the # before the include
-include /Users/pixeljellyfish/theos/makefiles/aggregate.mk
+#include /Users/pixeljellyfish/theos/makefiles/aggregate.mk
 
 # for Linux users comment out the # before the include
-#include /home/pixeljellyfish/theos/makefiles/aggregate.mk
+include /home/pixelfish04/theos/makefiles/aggregate.mk
 
 # for Windows users comment out the # before the include
 #include /opt/theos/makefiles/aggregate.mk
