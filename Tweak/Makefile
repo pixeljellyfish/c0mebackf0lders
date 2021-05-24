@@ -1,5 +1,6 @@
 #PREFIX=/Users/pixeljellyfish/theos/toolchain/Xcode.xctoolchain/usr/bin/
-TARGET := iphone:clang:11.2:10.3
+#TARGET := iphone:clang:latest:13.0
+#SYSROOT= $(THEOS)/sdks/iPhoneOS13.5.sdk
 # for window users comment out the # before the include
 #ARCHS = arm64
 
@@ -21,7 +22,6 @@ c0mebackf0lders_FILES = Tweak.x
 c0mebackf0lders_FRAMEWORKS += UIKit
 c0mebackf0lders_EXTRA_FRAMEWORKS += Cephei
 c0mebackf0lders_PRIVATE_FRAMEWORKS = SpringBoardServices
-open_LDFLAGS += -F$(SYSROOT)/System/Library/PrivateFrameworks -framework SpringBoardServices
 
 after-install::
 	install.exec "sbreload"

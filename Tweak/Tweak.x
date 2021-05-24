@@ -4,7 +4,6 @@
 // next we imported my own header file which controls parts of my tweak without making a mess on the tweak.x file.
 #import "c0mebackf0lders.h"
 
-static FoldrEmpty* folderemptyClassInstance;
 
 // now time for the main tweak code that adds support for ios 7.0 thru to ios 14.x.x
 
@@ -39,14 +38,17 @@ static FoldrEmpty* folderemptyClassInstance;
  %hook SBFolder
 
 - (BOOL)isEmpty {
-		return folderemptyClassInstance = YES && %orig;
+		%orig;
+		return YES;
 }
 	%end
 %end
-
+/*
  %group shortcutitem
 
     %hook SBIconView
+
+	SBFolderController *sbFolder = [%c(SBFolder) sharedInstance];
 
 - (void)setApplicationShortcutItems:(NSArray *)arg1 {
 	NSMutableArray *newItems = [[NSMutableArray alloc] init];
@@ -63,15 +65,19 @@ static FoldrEmpty* folderemptyClassInstance;
 }
 + (void)activateShortcut:(SBSApplicationShortcutItem *)item withBundleIdentifier:(NSString *)bundleID forIconView:(SBIconView *)iconView {
 	if ([[item type] isEqualToString:@"com.pixeljellyfish.c0mebackf0lders"]) {
-		[[FoldrEmpty sharedInstance] isEmpty];
-        return;
+		
+		BOOL folder = [sbFolder isEmpty];
+
+        if (folder) {
+			[sbFolder isEmpty:YES];
+		}
 	} else {	
 		%orig;
 	}
 }
         %end
 %end
-
+*/
 // this is basically a Notification that is posted when a chage is made to the preferences Identifier
 extern NSString *const HBPreferencesDidChangeNotification;
 // now for the preferences
@@ -83,7 +89,7 @@ extern NSString *const HBPreferencesDidChangeNotification;
 // then we init the main tweak if the enabled has been turned on
 	%init(maintweak);
 	%init(DeleteFolder);
-	%init(shortcutitem);
+  /*	%init(shortcutitem); */
 }
 
 // and yeah that's the end of the tweak.x file i hope i made it easy for new developers to follow along and learn tweak development the way i did 😃
