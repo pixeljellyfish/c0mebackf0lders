@@ -22,7 +22,7 @@
             // so then we return NO to force ios to not delete the folder if it's empty
 			return NO;
 		}
-
+  
 // and the last part of the main tweak is the isEmpty method this basically tells ios that a folder is not empty when it is
 		-(BOOL)isEmpty {
             //so we return NO to force it to trick ios to think that the folder is not empty and has apps or icons
@@ -31,24 +31,12 @@
 
 	%end
 %end
- 
+
 // i commented this out until i find a fix for it
 
- %group DeleteFolder
- %hook SBFolder
-
-- (BOOL)isEmpty {
-		%orig;
-		return YES;
-}
-	%end
-%end
-/*
  %group shortcutitem
 
     %hook SBIconView
-
-	SBFolderController *sbFolder = [%c(SBFolder) sharedInstance];
 
 - (void)setApplicationShortcutItems:(NSArray *)arg1 {
 	NSMutableArray *newItems = [[NSMutableArray alloc] init];
@@ -65,31 +53,24 @@
 }
 + (void)activateShortcut:(SBSApplicationShortcutItem *)item withBundleIdentifier:(NSString *)bundleID forIconView:(SBIconView *)iconView {
 	if ([[item type] isEqualToString:@"com.pixeljellyfish.c0mebackf0lders"]) {
-		
-		BOOL folder = [sbFolder isEmpty];
-
-        if (folder) {
-			[sbFolder isEmpty:YES];
+			%orig;
+		    NSLog(@"[shortcutitem] Can we delete this???. YES!");
 		}
-	} else {	
-		%orig;
 	}
-}
         %end
 %end
-*/
+ 
 // this is basically a Notification that is posted when a chage is made to the preferences Identifier
 extern NSString *const HBPreferencesDidChangeNotification;
 // now for the preferences
 %ctor {
     // this basically calls the preferences and inits the cbfprefs bundle id
-    prefs = [[HBPreferences alloc] initWithIdentifier:@"com.pixeljellyfish.cbfprefs"];
+    prefs = [[HBPreferences alloc] initWithIdentifier:@"codes.pixeljellyfish.cbfprefs"];
 // and then this resisters the bool Enabled with the Enabled in the Root.plist in the prefs folder
     [prefs registerBool:&Enabled default:YES forKey:@"Enabled"];
 // then we init the main tweak if the enabled has been turned on
 	%init(maintweak);
-	%init(DeleteFolder);
-  /*	%init(shortcutitem); */
+    %init(shortcutitem);
 }
 
 // and yeah that's the end of the tweak.x file i hope i made it easy for new developers to follow along and learn tweak development the way i did 😃

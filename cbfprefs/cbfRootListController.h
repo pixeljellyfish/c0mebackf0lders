@@ -4,10 +4,11 @@
 #import <CepheiPrefs/HBAppearanceSettings.h>
 #import <Cephei/HBPreferences.h>
 
-@interface AppearanceSettings : HBAppearanceSettings
+@interface cbfAppearanceSettings : HBAppearanceSettings
 @end
 
-@interface cbfRootListController : HBRootListController {
+@interface cbfRootListController : PSListController {
+
     UITableView * _table;
 }
 

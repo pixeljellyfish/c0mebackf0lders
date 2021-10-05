@@ -1,4 +1,4 @@
-#import "./cbfRootListController.h"
+#include "cbfRootListController.h"
 #import <Cephei/HBRespringController.h>
 #import <spawn.h>
 
@@ -8,7 +8,7 @@
     self = [super init];
 
     if (self) {
-        AppearanceSettings *appearanceSettings = [[AppearanceSettings alloc] init];
+        cbfAppearanceSettings *appearanceSettings = [[cbfAppearanceSettings alloc] init];
         self.hb_appearanceSettings = appearanceSettings;
         self.respringButton = [[UIBarButtonItem alloc] initWithTitle:@"Respring"
                                     style:UIBarButtonItemStylePlain
@@ -48,13 +48,14 @@
     return self;
 }
 
--(NSArray *)specifiers {
-    if (_specifiers == nil) {
-        _specifiers = [[self loadSpecifiersFromPlistName:@"Root" target:self] retain];
-    }
+- (NSArray *)specifiers {
+	if (!_specifiers) {
+		_specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
+	}
 
-    return _specifiers;
+	return _specifiers;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

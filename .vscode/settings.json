@@ -37,5 +37,5 @@
         "sileo depiction",
         "tweak"
     ],
-    "discord.enabled": false
+    "discord.enabled": true
 }

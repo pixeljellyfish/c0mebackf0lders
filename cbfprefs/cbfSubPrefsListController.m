@@ -1,14 +1,15 @@
 #import "cbfSubPrefsListController.h"
 
+
+
 @implementation cbfSubPrefsListController
 
 - (instancetype)init {
     self = [super init];
 
     if (self) {
-        AppearanceSettings *appearanceSettings = [[AppearanceSettings alloc] init];
+        cbfAppearanceSettings *appearanceSettings = [[cbfAppearanceSettings alloc] init];
         self.hb_appearanceSettings = appearanceSettings;
-
     }
 
     return self;
@@ -25,13 +26,15 @@
 }
 
 - (void)loadFromSpecifier:(PSSpecifier *)specifier {
-    NSString *sub = [specifier propertyForKey:@"cbfSub"];
-    NSString *title = [specifier name];
 
-    _specifiers = [[self loadSpecifiersFromPlistName:sub target:self] retain];
+    NSString* sub = [specifier propertyForKey:@"cbfSub"];
+    NSString* title = [specifier name];
+
+    _specifiers = [self loadSpecifiersFromPlistName:sub target:self];
 
     [self setTitle:title];
-    [self.navigationItem setTitle:title];
+    [[self navigationItem] setTitle:title];
+
 }
 
 - (void)setSpecifier:(PSSpecifier *)specifier {
