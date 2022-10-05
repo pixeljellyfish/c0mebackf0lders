@@ -28,6 +28,5 @@ echo "Thank you for installing C0meBackF0lders for iOS $vers"
 #echo ""
 #echo ""
 echo "Reloading Springboard..."
-su mobile -c sbreload
-alpine
+sbreload
 echo "Done!"
