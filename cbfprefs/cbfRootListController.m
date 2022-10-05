@@ -126,25 +126,23 @@
     self.headerImageView.frame = CGRectMake(0, offsetY, self.headerView.frame.size.width, 200 - offsetY);
 }
 
--(void)respring {
+- (void)respring {
     UIAlertController *respring = [UIAlertController alertControllerWithTitle:@"c0mebackf0lders"
-                                                     message:@"Do you really want to Respring?"
-                                                     preferredStyle:UIAlertControllerStyleAlert];
+                                                    message:@"Do you really want to Respring?"
+                                                    preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
             [self respringUtil];
     }];
-
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
     [respring addAction:confirmAction];
     [respring addAction:cancelAction];
     [self presentViewController:respring animated:YES completion:nil];
-
 }
 
 - (void)respringUtil {
-        pid_t pid;
-        const char *args[] = {"sbreload", NULL, NULL, NULL};
-        posix_spawn(&pid, "usr/bin/sbreload", NULL, NULL, (char *const *)args, NULL);
-    }
-
+	NSTask *t = [[NSTask alloc] init];
+    [t setLaunchPath:@"/usr/bin/sbreload"];
+    [t setArguments:[NSArray arrayWithObjects:@"sbreload", nil]];
+    [t launch];
+}
 @end

@@ -1,13 +1,13 @@
 # for mac and linux users comment out the # before the include
 ARCHS = arm64 arm64e
+export SYSROOT = /Users/pixeljellyfish/theos/sdks/iPhoneOS14.4.sdk
+#DEBUG=1
+GO_EASY_ON_ME = 1
+
+INSTALL_TARGET_PROCESSES += SpringBoard
 
 # for window users comment out the # before the include
 #ARCHS = arm64
-
-TARGET = iphone:clang::11.2
-
-export SYSROOT = /Users/pixeljellyfish/theos/sdks/iPhoneOS14.4.sdk
-
 
 # for mac users comment out the # before the include
 include /Users/pixeljellyfish/theos/makefiles/common.mk
@@ -18,19 +18,14 @@ include /Users/pixeljellyfish/theos/makefiles/common.mk
 # for windows users comment out the # before the include
 #include /opt/theos/makefiles/common.mk
 
-
 TWEAK_NAME = c0mebackf0lders
-
 c0mebackf0lders_FILES = Tweak.x
-c0mebackf0lders_FRAMEWORKS += UIKit
+c0mebackf0lders_FRAMEWORKS= UIKit
 c0mebackf0lders_EXTRA_FRAMEWORKS += Cephei
-c0mebackf0lders_CFLAGS = -fobjc-arc -DTHEOS_LEAN_AND_MEAN
-c0mebackf0lders_LDFLAGS += -w
-
+c0mebackf0lders_CFLAGS = -fobjc-arc
 
 after-install::
-	install.exec "SpringBoard"
-
+	install.exec "sbreload"
 
 # for mac users comment out the # before the include
 include /Users/pixeljellyfish/theos/makefiles/tweak.mk

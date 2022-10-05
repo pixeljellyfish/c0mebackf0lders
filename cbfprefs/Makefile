@@ -3,8 +3,7 @@
 
 # for Mac and Linux users comment out the # before the include
 ARCHS = arm64 arm64e
-
-TARGET = iphone:clang::11.2
+TARGET = iphone:clang:13.1
 
 export SYSROOT = /Users/pixeljellyfish/theos/sdks/iPhoneOS14.4.sdk
 
@@ -25,7 +24,7 @@ BUNDLE_NAME = cbfprefs
 cbfprefs_FILES = $(wildcard *.m)
 cbfprefs_FRAMEWORKS = UIKit
 cbfprefs_PRIVATE_FRAMEWORKS = Preferences
-cbfprefs_EXTRA_FRAMEWORKS = CepheiPrefs
+cbfprefs_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
 cbfprefs_INSTALL_PATH = /Library/PreferenceBundles
 cbfprefs_CFLAGS = -fobjc-arc
 
