@@ -1,18 +1,30 @@
+// ===========================
+// Imports:
+// ===========================
+
 // here we add our imports.
 // so again we imported Cephei which calls HBPreferences that controls our Preferences for us.
 #import <Cephei/HBPreferences.h>
+// ===========================
 
-// this is the Maintweak setup where we tell the tweak to have these bool methods when the tweak starts.
-BOOL Enabled;
-//BOOL add3dtouchplatter = FALSE;
-BOOL foldersShouldAppear = FALSE;
-BOOL isEnabled;
+// ===========================
+// Main Tweak Code:
+// ===========================
 
-// now this call our preferences from the tweak.x file.
-HBPreferences *prefs = nil;
+// This is the Maintweak setup where we tell the tweak to have these bool methods when the tweak starts.
+BOOL Enabled; // For the Enabled method
+//BOOL add3dtouchplatter = FALSE; // For the add3dtouchplatter method
+BOOL foldersShouldAppear = FALSE; // For the foldersShouldAppear method
+BOOL isEnabled; // For the isEnabled method
+// Now this call our preferences from the tweak.x file.
+HBPreferences *prefs = nil; // For HBPreferences
+// ===========================
 
-
-// we add some extra interface imports and UIviews for our tweak.x file.
+// ===========================
+// User Interface:
+// ===========================
+// Now we add the user interface for the tweak.
+// We add some extra interface imports and UIviews for our tweak.x file.
 @interface UIKBTree : NSObject
 @end
 
@@ -35,6 +47,10 @@ HBPreferences *prefs = nil;
 - (id)initWithImagePNGData:(id)arg1;
 - (BOOL)isTemplate;
 @end
+// ===========================
 
-
-// and this is the end of the header file
+// ===========================
+// Header End:
+// ===========================
+// And this is the end of the header file
+// ===========================

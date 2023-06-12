@@ -5,7 +5,7 @@
 ARCHS = arm64 arm64e
 TARGET = iphone:clang:13.1
 
-export SYSROOT = /Users/pixeljellyfish/theos/sdks/iPhoneOS14.4.sdk
+export SYSROOT = /Users/pixeljellyfish/theos/sdks/iPhoneOS16.2.sdk
 
 GO_EASY_ON_ME = 1
 
