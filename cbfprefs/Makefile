@@ -2,10 +2,9 @@
 #ARCHS = arm64
 
 # for Mac and Linux users comment out the # before the include
-ARCHS = arm64 arm64e
-TARGET = iphone:clang:13.1
+export ARCHS = arm64 arm64e
+export TARGET := iphone:clang:16.5:14.5
 
-export SYSROOT = /Users/pixeljellyfish/theos/sdks/iPhoneOS16.2.sdk
 
 GO_EASY_ON_ME = 1
 

@@ -1,6 +1,6 @@
 Package: com.pixeljellyfish.c0mebackf0lders
 Name: c0mebackf0lders
-Depends: mobilesubstrate, preferenceloader, ws.hbang.common, firmware (>= 7.0)
+Depends: mobilesubstrate, preferenceloader, ws.hbang.common (>= 1.17), firmware (>= 7.0)
 Version: 3.5
 Architecture: iphoneos-arm
 Description: Prevents Folders from being removed from the HomeScreen.

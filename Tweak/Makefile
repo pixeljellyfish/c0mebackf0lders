@@ -1,5 +1,5 @@
 # for mac and linux users comment out the # before the include
-ARCHS = arm64 arm64e
+export ARCHS = arm64 arm64e
 
 # for linux users comment out the # before the include
 #ARCHS = arm64 arm64e
@@ -8,12 +8,11 @@ ARCHS = arm64 arm64e
 #ARCHS = arm64 arm64e
 
 
-export SYSROOT = /Users/pixeljellyfish/theos/sdks/iPhoneOS16.2.sdk
 #DEBUG=1
 GO_EASY_ON_ME = 1
 
-INSTALL_TARGET_PROCESSES += SpringBoard
-THEOS_PACKAGE_SCHEME=rootless
+export INSTALL_TARGET_PROCESSES += SpringBoard
+export THEOS_PACKAGE_SCHEME=rootless
 
 
 # for mac users comment out the # before the include

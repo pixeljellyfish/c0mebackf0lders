@@ -60,9 +60,6 @@ extern NSString *const HBPreferencesDidChangeNotification;
 	if (Enabled) {
 		%init(maintweak);
 	}
-// Then we add the notification center to listen for changes to the preferences
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferencesChanged) name:HBPreferencesDidChangeNotification object:nil];
-
 // And that's the end of the preferences
 }
 // ======================================
